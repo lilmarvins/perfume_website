@@ -1,0 +1,76 @@
+.proddeets-parents{
+    display: flex;
+    justify-content: center;
+    min-height: 150vh;
+
+}
+
+.proddeets-parents .side-image img{
+    width: 6vw;
+    margin: 20px;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.proddeets-parents .large-image {
+width: 40%;
+background-color: rgb(7, 7, 7);
+}
+
+
+.proddeets-parents .large-image img{
+    width: 40vw;
+   
+}
+
+
+.proddeets-parents .details{
+    padding: 20px;
+}
+
+.proddeets-parents {
+    background-color:  #111111;
+    flex-wrap: wrap;
+}
+.proddeets-parents input{
+    width: 15%;
+    padding: 8px 15px;
+    box-shadow: 1px 3px 5px rgba(112, 142, 230, 0.3);
+    border: none;
+    border-radius: 5px;
+    margin:  10px 0;
+    font-size: 15px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, box-shadow 0.3s;
+
+}
+
+.proddeets-parents input:hover{
+    border-color: #888;
+}
+
+.proddeets-parents input:focus{
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255,0.4);
+}
+
+
+.proddeets-parents button{
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: red;
+    border: none;
+    color: white;
+    transition: transform 0.5s ease;
+}
+
+.proddeets-parents button:hover{
+    cursor: pointer;
+    scale: 1;
+    transform: translatey(-5px);
+   
+   
+   }
+   

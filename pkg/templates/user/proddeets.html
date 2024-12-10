@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="{{url_for('static',filename='proddeets.css')}}"
+  />    <title>Document</title>
+</head>
+<body>
+    {%extends "user/dashboard.html"%}
+
+{%block all%}
+<section>
+    <div class="proddeets-parents">
+    <div class="side-image">
+        <img src="/static/images/pinkpeff.png" alt="">
+        
+    </div>
+    <div class="large-image">
+        <img src="/static/images/pinkpeff.png" alt="">
+
+    </div>
+    <div class="details">
+        <h1>Sol De Janeiro Cheirosa 59 Perfume Mist 90ml</h1>
+        <p>in Stock</p>
+        <p>Price</p>
+        <h3> &#8358;50,000</h3>
+        <input type="number" required value="1">
+        <button> Add To Cart</button>
+
+        <p>Order now and get it within two to three days in Nigeria With DHL shipping</p>
+    </div>
+</div>
+</section>
+
+{%endblock all%}
+</body>
+</html>

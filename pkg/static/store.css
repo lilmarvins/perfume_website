@@ -1,0 +1,61 @@
+
+
+.fourth-section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding: 30px;
+  
+   
+
+}
+
+.active .fourth-child{
+    opacity: 1;
+    animation: slidedown 1s ease-in forwards;
+    cursor: pointer;
+}
+
+
+.fourth-section img{
+    width: 150px;
+    height: 150px;
+}
+.fourth-section .fourth-child{
+    background-color:  #1c1c1c;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    min-height: 300px;
+    opacity: 0;
+    overflow: hidden;
+    box-shadow: 1px 3px 5px rgba(255,255,255,0.3);
+
+}
+
+
+.fourth-section .fourth-child p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.fourth-section button{
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    background-color: black;
+    padding: 13px;
+    border: none;
+    transition: transform 0.5s ease;
+    font-size: 1vw;
+    width: 80%;
+    
+}
+
+.title-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

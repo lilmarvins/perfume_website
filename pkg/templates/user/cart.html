@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="{{url_for('static',filename='cart.css')}}"
+  />    <title>Document</title>
+</head>
+<body>
+    {%extends "user/dashboard.html"%}
+
+{%block all%}
+
+<section class="table-container">
+    <table class="striped-table ">
+        <thead>
+          <th>S/N</th>
+          <th>Prod Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </thead>
+        <tbody>
+         
+          <tr>
+            <td>1</td>
+            <td> <img src="/static/images/pinkpeff.png" alt="" class="img-fluid"style='width:50px'> </td>
+            <td>pink peff</td>
+            <form action="" method="post">
+              <input type="hidden" name="csrf_token" value="{{csrf_token()}}" id="">
+            <td>22,000</td> 
+            
+            <td> <input class="form-control" type="number" name="quantity" min="1" max="30"value="5"></td>
+
+            <td>40000</td>
+            <td class=" nav-link"><button type="submit" class="btn btn-primary">Update</button></td>
+          </form>
+            <td><a href="" class="btn btn-danger">Delete</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td> <img src="/static/images/goldpeff.png" alt="" class="img-fluid"style='width:50px'> </td>
+            <td>gold stopstopstopstopstopstop peff</td>
+            <form action="" method="post">
+              <input type="hidden" name="csrf_token" value="{{csrf_token()}}" id="">
+            <td>22,000</td> 
+            
+            <td> <input class="form-control" type="number" name="quantity" min="1" max="30"value="5"></td>
+
+            <td>40000</td>
+            <td class=" nav-link"><button type="submit" class="btn btn-primary">Update</button></td>
+          </form>
+            <td><a href="" class="btn btn-danger">Delete</a></td>
+          </tr>
+        
+
+
+    
+          <tr>
+            <td colspan="3"><a href="/" class="">Continue Shopping</a></td>
+            <td colspan="7"><h4>Grand total: 50000</h4></td>
+            
+          </tr>
+          <tr>
+            <td colspan="5"> <a id="checkout" href="/home/clearcart/" class="btn btn-danger col-md-4">Clear Cart</a></td>
+            <td colspan="5"> <a id="checkout" href="/home/confirmpayment/" class="btn btn-warning col-md-12">Check Out</a></td>
+            
+          </tr>
+      
+        
+        
+        <!-- <div  >
+          <img src="/static/images/pinkpeff.png" alt="" style="height: 200px; width: 200px; ">
+          <div >
+              <p id="forcart"></p>
+              <p class="text-dark text-center">Your Cart Is Empty</p>
+              <p class="text-dark text-center">browse our categories and discover our best details</p>
+              <form action="" method="get">
+                <button type="submit" class="btn btn-primary">Continue Shopping</button>
+              </form>
+                      
+        
+          </div>
+      </div> -->
+        
+        </tbody>
+      </table>
+
+</section>
+
+{%endblock all%}
+</body>
+</html>
