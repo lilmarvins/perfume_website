@@ -1,74 +1,111 @@
 /* Table Styles for Dark Background */
 .table-container{
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: 10px;
+  
 }
-.striped-table {
+
+
+  table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 16px;
-    text-align: left;
-    color: #f8f9fa; /* Light text for dark background */
-
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.8), rgba(30, 30, 30, 0.8));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 255, 255, 0.5);
   }
-  
-  /* Header Styles */
-  .striped-table thead tr {
-    background-color: #212529; /* Dark gray header */
-    color: #ffffff; /* White text for contrast */
-    text-align: left;
+
+  th, td {
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+  }
+
+  th {
+    background: rgba(0, 255, 255, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    color: #00ffff;
+  }
+
+  tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  tr:nth-child(even) {
+    background: rgba(0, 255, 255, 0.05);
+  }
+
+  tr:hover {
+    background: rgba(0, 255, 255, 0.15);
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+  }
+
+  td:first-child {
+    color: #ff00ff;
     font-weight: bold;
   }
-  
-  .striped-table th, 
-  .striped-table td {
-    padding: 12px 15px;
-    border: 1px solid #343a40; /* Subtle border */
 
-  }
-  
-  /* Zebra Striping */
-  .striped-table tbody tr:nth-child(odd) {
-    background-color: #2c2f33; /* Dark gray for odd rows */
-  }
-  
-  .striped-table tbody tr:nth-child(even) {
-    background-color: #23272b; /* Slightly darker gray for even rows */
-  }
-  
-  /* Hover Effect */
-  .striped-table tbody tr:hover {
-    background-color: #495057; /* Highlighted row */
-    color: #ffffff; /* Ensure contrast on hover */
+  td::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
   }
 
+  tr:hover td::before {
+    opacity: 1;
+  }
 
-
-  .striped-table a{
-     background-color: red;
-     padding: 10px;
-     border-radius: 7px;
-     color: white;
+  table caption {
+    caption-side: top;
+    color: #00ffff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
   }
 
 
-  
-  .striped-table button{
-    background-color: rgb(255, 136, 0);
-    padding: 10px;
-    border-radius: 7px;
-    color: white;
-    border: none;
-    cursor: pointer;
- }
- 
- .striped-table tr td:nth-child(2) a {
-   background-color: black;
- 
- }
- .striped-table tr td:nth-child(1) a {
-    background-color: black;
-  
-  }
+
+.striped-table a{
+   background-color: red;
+   padding: 10px;
+   border-radius: 7px;
+   color: white;
+}
+
+
+
+.striped-table button{
+  background-color: rgb(255, 136, 0);
+  padding: 10px;
+  border-radius: 7px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.striped-table tr td:nth-child(2) a {
+ background-color: black;
+
+}
+.striped-table tr td:nth-child(1) a {
+  background-color: black;
+
+}
