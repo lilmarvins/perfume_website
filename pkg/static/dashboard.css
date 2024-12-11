@@ -2,15 +2,16 @@
 
 *{
     text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+
 
 }
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     background-color: black;
     color: white;
     scroll-behavior: smooth;
-    box-sizing: border-box;
     text-decoration: none;
 
 }
@@ -65,56 +66,6 @@ header.navbar {
 .nav-menu .hidden{
     display: none;
  }
-
-@media screen and (max-width:768px){
-    .hamburger{
-        display: block;
-    }
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    .nav-menu{
-        position: fixed;
-        left: -160%;
-        top: 70px ;
-        gap: 0;
-        flex-direction: column;
-        background-color:black ;
-        width: 100%;
-        height: 100%;
-        padding: 0 20px;
-        transition: 0.3s;
-        z-index: 3000;
-    }
-    .nav-menu a{
-        margin: 20px 0;
-    }
-    .nav-menu.active{
-        left: 0;
-    }
-
-    .nav-menu a:nth-of-type(4){
-        border-bottom: 1px solid rgb(45, 44, 44);
-        padding-bottom: 20px;
-    }
-    .nav-menu a:nth-of-type(7){
-        border-bottom: 1px solid rgb(45, 44, 44);
-        padding-bottom: 20px;
-    }
-    .nav-menu .hidden{
-        display: block;
-    }
-   
-}
-
-
 
 .close{
     position: absolute;
@@ -384,7 +335,6 @@ header.navbar {
     padding: 1s3px;
     border: none;
     transition: transform 0.5s ease;
-    font-size: 1vw;
 }
 
 .third-sectionkid button:hover{
@@ -420,11 +370,15 @@ header.navbar {
 
 
 .fourth-section{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 50px;
+    gap: 16px;
     padding: 30px;
+    width: 100%;
+    overflow-x: hidden;
+   
+
   
    
 
@@ -433,19 +387,27 @@ header.navbar {
     opacity: 1;
     animation: slidedown 1s ease-in forwards;
     cursor: pointer;
+
 }
 
 
 .fourth-section img{
-    width: 150px;
+    width: 100%;
     height: 150px;
+    display: block;
+    object-fit: contain;
+}
+
+.fourth-section p{
+    margin-top:60px ;
+
 }
 .fourth-section .fourth-child{
     background-color:  #1c1c1c;
     text-align: center;
     padding: 15px;
-    margin: 10px;
-    width: 200px;
+    margin: 5px;
+    width: 100%;
     min-height: 300px;
     opacity: 0;
     overflow: hidden;
@@ -467,7 +429,7 @@ header.navbar {
     padding: 13px;
     border: none;
     transition: transform 0.5s ease;
-    font-size: 1vw;
+    margin-top:48px ;
     width: 80%;
     
 }
@@ -526,7 +488,7 @@ header.navbar {
 }
 
 .section-five-parent img{
-    width: 300px;
+    width: 70%;
     
 }
 
@@ -664,3 +626,64 @@ footer button:hover{
    
    
    }
+
+   
+@media screen and (max-width:768px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -160%;
+        top: 70px ;
+        gap: 0;
+        flex-direction: column;
+        background-color:black ;
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        transition: 0.3s;
+        z-index: 3000;
+    }
+    .nav-menu a{
+        margin: 20px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+
+    .nav-menu a:nth-of-type(4){
+        border-bottom: 1px solid rgb(45, 44, 44);
+        padding-bottom: 20px;
+    }
+    .nav-menu a:nth-of-type(7){
+        border-bottom: 1px solid rgb(45, 44, 44);
+        padding-bottom: 20px;
+    }
+    .nav-menu .hidden{
+        display: block;
+    }
+
+
+    .fourth-section{
+       padding: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+
+
+    } 
+     
+    
+   
+}
+
+
