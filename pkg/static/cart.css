@@ -109,3 +109,7 @@
   background-color: black;
 
 }
+
+.striped-table input{
+  width: 80%;
+}
