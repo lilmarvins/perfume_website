@@ -4,6 +4,8 @@
     text-decoration: none;
     box-sizing: border-box;
     margin: 0;
+    list-style-type: none;
+    padding: 0;
 
 
 }
@@ -22,6 +24,10 @@ header.navbar {
     background-color: black;
     padding: 0 20px;
     color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 4000;
 }
 .nav-brand {
     font-size: 1.5em;
@@ -610,6 +616,15 @@ footer button:hover{
     justify-content: center;
     align-items: center;
     display: none;
+    position: absolute;
+    top: 80%;
+    z-index: 4000;
+    width: 100%;
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    left: 0;
+   
 }
 
 .search button{
@@ -627,7 +642,47 @@ footer button:hover{
    
    
    }
+.account-modal a{
+    color: white;
+}
 
+.account-modal{
+    z-index: 5000;
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    width: 220px;
+    overflow: hidden;
+   max-height: 0;
+   transition: max-height 0.5s;
+
+   }
+   .account-modal.active{
+    max-height: 400px;
+   }
+
+   .account-modal ul{
+ 
+    background-color: black;
+    padding-left: 0;
+  padding: 20px;
+
+   }
+   .account-modal ul li{
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #1c1c1c;
+    border-radius: 8px;
+   
+    text-align: center;
+    width: 100%;
+    
+   }
+
+   .account-modal ul li:hover{
+    cursor: pointer;
+   }
    
 @media screen and (max-width:768px){
     .hamburger{
@@ -683,7 +738,9 @@ footer button:hover{
 
     } 
      
-    
+    .account-modal{
+        width: 200px;
+    }
    
 }
 

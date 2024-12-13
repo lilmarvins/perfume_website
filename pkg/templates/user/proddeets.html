@@ -6,7 +6,7 @@
     <link
     rel="stylesheet"
     href="{{url_for('static',filename='proddeets.css')}}"
-  />    <title>Document</title>
+  />    <title>{{title}}</title>
 </head>
 <body>
     {%extends "user/dashboard.html"%}
@@ -25,16 +25,23 @@
     <div class="details">
         <h1>Sol De Janeiro Cheirosa 59 Perfume Mist 90ml</h1>
         <p>in Stock</p>
-        <p>Price</p>
+        <p class="price">Price</p>
         <h3> &#8358;50,000</h3>
-        <input type="number" required value="1">
-        <button> Add To Cart</button>
+        <div class="quantity-control">
+            <button id="decrement" class="btn">-</button>
+            <input type="number" id="quantity" value="1" min="1">
+            <button id="increment" class="btn">+</button>
+        </div>
+                <button> Add To Cart</button>
 
         <p>Order now and get it within two to three days in Nigeria With DHL shipping</p>
     </div>
 </div>
 </section>
+<script src="{{url_for('static',filename='proddeets.js')}}"></script>
 
 {%endblock all%}
+
+
 </body>
 </html>

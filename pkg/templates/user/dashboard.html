@@ -9,99 +9,136 @@
       rel="stylesheet"
       href="{{url_for('static',filename='dashboard.css')}}"
     />
-
   </head>
   <body>
-   
+    {%block header%}
+    <header class="navbar">
+      <div class="nav-brand">
+        <h1 onclick="document.location.href='/'">BEST.</h1>
+      </div>
+      <nav class="nav-menu">
+        <a href="{{url_for('home')}}" class="nav-link">HOME</a>
+        <a href="" class="nav-link">ABOUT</a>
+        <p class="nav-link" id="store">STORE</p>
+        <a href="" class="nav-link">BLOG</a>
+        <p class="nav-link hidden">NEED HELP?</p>
+        <a href="tel:+23409079983493" class="nav-link hidden">
+          Call Us: 09079983493</a
+        >
+        <a href="mailto:marvins@gmail.com" class="nav-link hidden">
+          Email: best@gmail.com</a
+        >
+        <p class="nav-link hidden">FOLLOW US ON</p>
+        <a href="" class="nav-link hidden"></a>
+      </nav>
 
-      {%block header%}
-      <header class="navbar">
-        <div class="nav-brand">
-          <h1  onclick="document.location.href='/'">BEST.</h1>
-        </div>
-        <nav class="nav-menu">
-          <a href="{{url_for('home')}}" class="nav-link">HOME</a>
-          <a href="" class="nav-link">ABOUT</a>
-          <p class="nav-link" id="store">STORE</p>
-          <a href="" class="nav-link">BLOG</a>
-          <p class="nav-link hidden">NEED HELP?</p>
-          <a href="tel:+23409079983493" class="nav-link hidden"> Call Us: 09079983493</a>
-          <a href="mailto:marvins@gmail.com" class="nav-link hidden" > Email: best@gmail.com</a>
-          <p class="nav-link hidden">FOLLOW US ON</p>
-          <a href="" class="nav-link hidden"></a>
-          
-        </nav>
-
-        <div class="perfume-modal" id="perfumemodal">
-          <span class="close">&#8592; Back</span>
-          <a href="{{url_for('store')}}">Perfume</a>
-          <a href="{{url_for('store')}}">Men</a>
-          <a href="{{url_for('store')}}">Women</a>
-          <a href="{{url_for('store')}}">Oil Perfume</a>
-          <a href="{{url_for('store')}}"> Deodorants</a>
-          <a href="{{url_for('store')}}">Powder</a>
-        
-
-        </div>
-        <div class="nav-icons">
-          <svg id="searchicon"
-            width="25px"
-            height="25px"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#ffffff"
-          >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
+      <div class="perfume-modal" id="perfumemodal">
+        <span class="close">&#8592; Back</span>
+        <a href="{{url_for('store')}}">Perfume</a>
+        <a href="{{url_for('store')}}">Men</a>
+        <a href="{{url_for('store')}}">Women</a>
+        <a href="{{url_for('store')}}">Oil Perfume</a>
+        <a href="{{url_for('store')}}"> Deodorants</a>
+        <a href="{{url_for('store')}}">Powder</a>
+      </div>
+      <div class="nav-icons">
+        <svg
+          id="searchicon"
+          width="25px"
+          height="25px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          stroke="#ffffff"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+              stroke="#ffffff"
+              stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-              <path
-                d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
-                stroke="#ffffff"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </g>
-          </svg>
-          <svg onclick="document.location.href='/cart/'"
-            width="25px"
-            height="25px"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#ffffff"
-          >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M16.5285 6C16.5098 5.9193 16.4904 5.83842 16.4701 5.75746C16.2061 4.70138 15.7904 3.55383 15.1125 2.65C14.4135 1.71802 13.3929 1 12 1C10.6071 1 9.58648 1.71802 8.88749 2.65C8.20962 3.55383 7.79387 4.70138 7.52985 5.75747C7.50961 5.83842 7.49016 5.9193 7.47145 6H5.8711C4.29171 6 2.98281 7.22455 2.87775 8.80044L2.14441 19.8004C2.02898 21.532 3.40238 23 5.13777 23H18.8622C20.5976 23 21.971 21.532 21.8556 19.8004L21.1222 8.80044C21.0172 7.22455 19.7083 6 18.1289 6H16.5285ZM8 11C8.57298 11 8.99806 10.5684 9.00001 9.99817C9.00016 9.97438 9.00044 9.9506 9.00084 9.92682C9.00172 9.87413 9.00351 9.79455 9.00718 9.69194C9.01451 9.48652 9.0293 9.18999 9.05905 8.83304C9.08015 8.57976 9.10858 8.29862 9.14674 8H14.8533C14.8914 8.29862 14.9198 8.57976 14.941 8.83305C14.9707 9.18999 14.9855 9.48652 14.9928 9.69194C14.9965 9.79455 14.9983 9.87413 14.9992 9.92682C14.9996 9.95134 14.9999 9.97587 15 10.0004C15 10.0004 15 11 16 11C17 11 17 9.99866 17 9.99866C16.9999 9.9636 16.9995 9.92854 16.9989 9.89349C16.9978 9.829 16.9957 9.7367 16.9915 9.62056C16.9833 9.38848 16.9668 9.06001 16.934 8.66695C16.917 8.46202 16.8953 8.23812 16.8679 8H18.1289C18.6554 8 19.0917 8.40818 19.1267 8.93348L19.86 19.9335C19.8985 20.5107 19.4407 21 18.8622 21H5.13777C4.55931 21 4.10151 20.5107 4.13998 19.9335L4.87332 8.93348C4.90834 8.40818 5.34464 8 5.8711 8H7.13208C7.10465 8.23812 7.08303 8.46202 7.06595 8.66696C7.0332 9.06001 7.01674 9.38848 7.00845 9.62056C7.0043 9.7367 7.00219 9.829 7.00112 9.89349C7.00054 9.92785 7.00011 9.96221 7 9.99658C6.99924 10.5672 7.42833 11 8 11ZM9.53352 6H14.4665C14.2353 5.15322 13.921 4.39466 13.5125 3.85C13.0865 3.28198 12.6071 3 12 3C11.3929 3 10.9135 3.28198 10.4875 3.85C10.079 4.39466 9.76472 5.15322 9.53352 6Z"
-                fill="#ffffff"
-              ></path>
-            </g>
-          </svg>
-        </div>
-        <div class="hamburger" id="nav-toggle">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </header>
+            ></path>
+          </g>
+        </svg>
 
-      <div class="search" id="search-modal">
-        <input type="search" name="" id=""> 
-        <button> <svg 
+        <svg id="account"
+          fill="#ffffff"
+          width="25px"
+          height="25px"
+          viewBox="0 0 48 48"
+          data-name="Layer 1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          stroke="#ffffff"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <title></title>
+            <path
+              d="M24,21A10,10,0,1,1,34,11,10,10,0,0,1,24,21ZM24,5a6,6,0,1,0,6,6A6,6,0,0,0,24,5Z"
+            ></path>
+            <path
+              d="M42,47H6a2,2,0,0,1-2-2V39A16,16,0,0,1,20,23h8A16,16,0,0,1,44,39v6A2,2,0,0,1,42,47ZM8,43H40V39A12,12,0,0,0,28,27H20A12,12,0,0,0,8,39Z"
+            ></path>
+          </g>
+        </svg>
+
+        <svg
+          onclick="document.location.href='/cart/'"
+          width="25px"
+          height="25px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          stroke="#ffffff"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16.5285 6C16.5098 5.9193 16.4904 5.83842 16.4701 5.75746C16.2061 4.70138 15.7904 3.55383 15.1125 2.65C14.4135 1.71802 13.3929 1 12 1C10.6071 1 9.58648 1.71802 8.88749 2.65C8.20962 3.55383 7.79387 4.70138 7.52985 5.75747C7.50961 5.83842 7.49016 5.9193 7.47145 6H5.8711C4.29171 6 2.98281 7.22455 2.87775 8.80044L2.14441 19.8004C2.02898 21.532 3.40238 23 5.13777 23H18.8622C20.5976 23 21.971 21.532 21.8556 19.8004L21.1222 8.80044C21.0172 7.22455 19.7083 6 18.1289 6H16.5285ZM8 11C8.57298 11 8.99806 10.5684 9.00001 9.99817C9.00016 9.97438 9.00044 9.9506 9.00084 9.92682C9.00172 9.87413 9.00351 9.79455 9.00718 9.69194C9.01451 9.48652 9.0293 9.18999 9.05905 8.83304C9.08015 8.57976 9.10858 8.29862 9.14674 8H14.8533C14.8914 8.29862 14.9198 8.57976 14.941 8.83305C14.9707 9.18999 14.9855 9.48652 14.9928 9.69194C14.9965 9.79455 14.9983 9.87413 14.9992 9.92682C14.9996 9.95134 14.9999 9.97587 15 10.0004C15 10.0004 15 11 16 11C17 11 17 9.99866 17 9.99866C16.9999 9.9636 16.9995 9.92854 16.9989 9.89349C16.9978 9.829 16.9957 9.7367 16.9915 9.62056C16.9833 9.38848 16.9668 9.06001 16.934 8.66695C16.917 8.46202 16.8953 8.23812 16.8679 8H18.1289C18.6554 8 19.0917 8.40818 19.1267 8.93348L19.86 19.9335C19.8985 20.5107 19.4407 21 18.8622 21H5.13777C4.55931 21 4.10151 20.5107 4.13998 19.9335L4.87332 8.93348C4.90834 8.40818 5.34464 8 5.8711 8H7.13208C7.10465 8.23812 7.08303 8.46202 7.06595 8.66696C7.0332 9.06001 7.01674 9.38848 7.00845 9.62056C7.0043 9.7367 7.00219 9.829 7.00112 9.89349C7.00054 9.92785 7.00011 9.96221 7 9.99658C6.99924 10.5672 7.42833 11 8 11ZM9.53352 6H14.4665C14.2353 5.15322 13.921 4.39466 13.5125 3.85C13.0865 3.28198 12.6071 3 12 3C11.3929 3 10.9135 3.28198 10.4875 3.85C10.079 4.39466 9.76472 5.15322 9.53352 6Z"
+              fill="#ffffff"
+            ></path>
+          </g>
+        </svg>
+      </div>
+      <div class="hamburger" id="nav-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      
+    <div id="accountmodal" class="account-modal">
+      <ul>
+        <li><a href="{{url_for('account')}}">My Account </a></li>
+        <li><a href="">My Orders</a></li>
+        <li><a href="">Logout</a></li>
+      </ul>
+
+    </div>
+
+    <div class="search" id="search-modal">
+      <input type="search" name="" id="" />
+      <button>
+        <svg
           width="15px"
           height="15px"
           viewBox="0 0 24 24"
@@ -124,200 +161,215 @@
               stroke-linejoin="round"
             ></path>
           </g>
-        </svg> Search</button>
-      </div>
-      {%endblock header%}
-      {%block all%}
-      <div class="best-design">
-        <video
-          src="/static/images/peffvid.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-          class="background-video"
-        ></video>
-        <div>
-          <p class="intro1">Introducing Best Perfmes</p>
-          <h1 class="big-word">BEST</h1>
-          <p class="intro2">where the best fragrance are found</p>
-        </div>
-      </div>
+        </svg>
+        Search
+      </button>
+    </div>
+    </header>
+
 
     
+    {%endblock header%} {%block all%}
+    <div class="best-design">
+      <video
+        src="/static/images/peffvid.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        class="background-video"
+      ></video>
+      <div>
+        <p class="intro1">Introducing Best Perfmes</p>
+        <h1 class="big-word">BEST</h1>
+        <p class="intro2">where the best fragrance are found</p>
+      </div>
+    </div>
 
     <section>
-      <div class="second-section reveal ">
-
+      <div class="second-section reveal">
         <div class="second1">
-            <img src="/static/images/peffpic.png" alt="">
+          <img src="/static/images/peffpic.png" alt="" />
         </div>
         <div class="second2">
           <h1>Explore our latest fragrance</h1>
           <h3>With top notch qallity and lasting scents</h3>
           <p>
-            here we give you the best you could ever ask for,
-            making you scent 
+            here we give you the best you could ever ask for, making you scent
           </p>
         </div>
-        
       </div>
     </section>
     <section>
       <div class="third-section">
         <div class="third-sectionkid reveal">
-          <div  class="third-sectionkid1">
+          <div class="third-sectionkid1">
             <h1>Immerse yourself in quality fragrance</h1>
-            <p> Get it now up to 50% off</p>
-            <button type="submit"><svg
-              width="15px"
-              height="15px"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              stroke="#ffffff"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M16.5285 6C16.5098 5.9193 16.4904 5.83842 16.4701 5.75746C16.2061 4.70138 15.7904 3.55383 15.1125 2.65C14.4135 1.71802 13.3929 1 12 1C10.6071 1 9.58648 1.71802 8.88749 2.65C8.20962 3.55383 7.79387 4.70138 7.52985 5.75747C7.50961 5.83842 7.49016 5.9193 7.47145 6H5.8711C4.29171 6 2.98281 7.22455 2.87775 8.80044L2.14441 19.8004C2.02898 21.532 3.40238 23 5.13777 23H18.8622C20.5976 23 21.971 21.532 21.8556 19.8004L21.1222 8.80044C21.0172 7.22455 19.7083 6 18.1289 6H16.5285ZM8 11C8.57298 11 8.99806 10.5684 9.00001 9.99817C9.00016 9.97438 9.00044 9.9506 9.00084 9.92682C9.00172 9.87413 9.00351 9.79455 9.00718 9.69194C9.01451 9.48652 9.0293 9.18999 9.05905 8.83304C9.08015 8.57976 9.10858 8.29862 9.14674 8H14.8533C14.8914 8.29862 14.9198 8.57976 14.941 8.83305C14.9707 9.18999 14.9855 9.48652 14.9928 9.69194C14.9965 9.79455 14.9983 9.87413 14.9992 9.92682C14.9996 9.95134 14.9999 9.97587 15 10.0004C15 10.0004 15 11 16 11C17 11 17 9.99866 17 9.99866C16.9999 9.9636 16.9995 9.92854 16.9989 9.89349C16.9978 9.829 16.9957 9.7367 16.9915 9.62056C16.9833 9.38848 16.9668 9.06001 16.934 8.66695C16.917 8.46202 16.8953 8.23812 16.8679 8H18.1289C18.6554 8 19.0917 8.40818 19.1267 8.93348L19.86 19.9335C19.8985 20.5107 19.4407 21 18.8622 21H5.13777C4.55931 21 4.10151 20.5107 4.13998 19.9335L4.87332 8.93348C4.90834 8.40818 5.34464 8 5.8711 8H7.13208C7.10465 8.23812 7.08303 8.46202 7.06595 8.66696C7.0332 9.06001 7.01674 9.38848 7.00845 9.62056C7.0043 9.7367 7.00219 9.829 7.00112 9.89349C7.00054 9.92785 7.00011 9.96221 7 9.99658C6.99924 10.5672 7.42833 11 8 11ZM9.53352 6H14.4665C14.2353 5.15322 13.921 4.39466 13.5125 3.85C13.0865 3.28198 12.6071 3 12 3C11.3929 3 10.9135 3.28198 10.4875 3.85C10.079 4.39466 9.76472 5.15322 9.53352 6Z"
-                  fill="#ffffff"
-                ></path>
-              </g>
-            </svg> Shop now</button>
-            
+            <p>Get it now up to 50% off</p>
+            <button type="submit">
+              <svg
+                width="15px"
+                height="15px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#ffffff"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M16.5285 6C16.5098 5.9193 16.4904 5.83842 16.4701 5.75746C16.2061 4.70138 15.7904 3.55383 15.1125 2.65C14.4135 1.71802 13.3929 1 12 1C10.6071 1 9.58648 1.71802 8.88749 2.65C8.20962 3.55383 7.79387 4.70138 7.52985 5.75747C7.50961 5.83842 7.49016 5.9193 7.47145 6H5.8711C4.29171 6 2.98281 7.22455 2.87775 8.80044L2.14441 19.8004C2.02898 21.532 3.40238 23 5.13777 23H18.8622C20.5976 23 21.971 21.532 21.8556 19.8004L21.1222 8.80044C21.0172 7.22455 19.7083 6 18.1289 6H16.5285ZM8 11C8.57298 11 8.99806 10.5684 9.00001 9.99817C9.00016 9.97438 9.00044 9.9506 9.00084 9.92682C9.00172 9.87413 9.00351 9.79455 9.00718 9.69194C9.01451 9.48652 9.0293 9.18999 9.05905 8.83304C9.08015 8.57976 9.10858 8.29862 9.14674 8H14.8533C14.8914 8.29862 14.9198 8.57976 14.941 8.83305C14.9707 9.18999 14.9855 9.48652 14.9928 9.69194C14.9965 9.79455 14.9983 9.87413 14.9992 9.92682C14.9996 9.95134 14.9999 9.97587 15 10.0004C15 10.0004 15 11 16 11C17 11 17 9.99866 17 9.99866C16.9999 9.9636 16.9995 9.92854 16.9989 9.89349C16.9978 9.829 16.9957 9.7367 16.9915 9.62056C16.9833 9.38848 16.9668 9.06001 16.934 8.66695C16.917 8.46202 16.8953 8.23812 16.8679 8H18.1289C18.6554 8 19.0917 8.40818 19.1267 8.93348L19.86 19.9335C19.8985 20.5107 19.4407 21 18.8622 21H5.13777C4.55931 21 4.10151 20.5107 4.13998 19.9335L4.87332 8.93348C4.90834 8.40818 5.34464 8 5.8711 8H7.13208C7.10465 8.23812 7.08303 8.46202 7.06595 8.66696C7.0332 9.06001 7.01674 9.38848 7.00845 9.62056C7.0043 9.7367 7.00219 9.829 7.00112 9.89349C7.00054 9.92785 7.00011 9.96221 7 9.99658C6.99924 10.5672 7.42833 11 8 11ZM9.53352 6H14.4665C14.2353 5.15322 13.921 4.39466 13.5125 3.85C13.0865 3.28198 12.6071 3 12 3C11.3929 3 10.9135 3.28198 10.4875 3.85C10.079 4.39466 9.76472 5.15322 9.53352 6Z"
+                    fill="#ffffff"
+                  ></path>
+                </g>
+              </svg>
+              Shop now
+            </button>
           </div>
           <div class="third-sectionkid2">
-            <img src="/static/images/goldpeff.png" alt="">
+            <img src="/static/images/goldpeff.png" alt="" />
           </div>
         </div>
-        
       </div>
     </section>
     <section>
       <div class="fourth-section reveal">
         <div class="fourth-child">
-          <img src="/static/images/peffpic.png" alt="">
-          <p> Solitde Perfmes</p>
-           <button> Add to cart</button>
-        </div>
-
-
-        <div class="fourth-child">
-          <img src="/static/images/peffpic.png" alt="">
-          <p> Solitde Perfmes</p>
-           <button> Add to cart</button>
-        </div>
-
-
-        <div class="fourth-child">
-          <img src="/static/images/goldpeff.png" alt="">
-          <p> Solitde Perfmes</p>
-           <button> Add to cart</button>
-        </div>
-
-
-        <div class="fourth-child">
-          <img src="/static/images/pinkpeff.png" alt="" onclick="document.location.href='/proddeets/'" >
-          <p> Solitde Perfmes and dinast globs</p>
-           <button> Add to cart</button>
-        </div>
-
-
-      
-        <div class="fourth-child">
-          <img src="/static/images/goldpeff.png" alt="">
-          <p> Solitde Perfmes</p>
-           <button> Add to cart</button>
+          <img src="/static/images/goldpeff.png" alt="" />
+          <p>Solitde Perfmes</p>
+          <p>&#8358; 50000</p>
+          <button>Add to cart</button>
         </div>
 
         <div class="fourth-child">
-          <img src="/static/images/peffpic.png" alt="">
-          <p> Solitde Perfmes</p>
-           <button> Add to cart</button>
+          <img src="/static/images/peffpic.png" alt="" />
+          <p>Solitde Perfmes</p>
+          <p>&#8358; 50000</p>
+          <button>Add to cart</button>
         </div>
 
         <div class="fourth-child">
-          <img src="/static/images/goldpeff.png" alt="">
-          <p> Solitde Perfmes</p>
-           <button> Add to cart</button>
+          <img
+            src="/static/images/pinkpeff.png"
+            alt=""
+            onclick="document.location.href='/proddeets/'"
+          />
+          <p>Solitde Perfmes</p>
+          <p>&#8358; 50000</p>
+          <button>Add to cart</button>
         </div>
 
+        <div class="fourth-child">
+          <img src="/static/images/peffpic.png" alt="" />
+          <p>Solitde Perfmes</p>
+          <p>&#8358; 50000</p>
+          <button>Add to cart</button>
+        </div>
 
         <div class="fourth-child">
-          <img src="/static/images/peffpic.png" alt="">
-          <p> Solitde Perfmes</p>
-           <button> Add to cart</button>
+          <img src="/static/images/goldpeff.png" alt="" />
+          <p>Solitde Perfmes</p>
+          <p>&#8358; 50000</p>
+          <button>Add to cart</button>
+        </div>
+
+        <div class="fourth-child">
+          <img src="/static/images/peffpic.png" alt="" />
+          <p>Solitde Perfmes</p>
+          <p>&#8358; 50000</p>
+          <button>Add to cart</button>
+        </div>
+
+        <div class="fourth-child">
+          <img src="/static/images/pinkpeff.png" alt="" />
+          <p>Solitde Perfmes</p>
+          <p>&#8358; 50000</p>
+          <button>Add to cart</button>
+        </div>
+
+        <div class="fourth-child">
+          <img src="/static/images/goldpeff.png" alt="" />
+          <p>Solitde Perfmes</p>
+          <p>&#8358; 50000</p>
+          <button>Add to cart</button>
+        </div>
+
+        <div class="fourth-child">
+          <img src="/static/images/peffpic.png" alt="" />
+          <p>Solitde Perfmes</p>
+          <p>&#8358; 50000</p>
+          <button>Add to cart</button>
+        </div>
+
+        <div class="fourth-child">
+          <img src="/static/images/pinkpeff.png" alt="" />
+          <p>Solitde Perfmes</p>
+          <p>&#8358; 50000</p>
+          <button>Add to cart</button>
         </div>
       </div>
-      
     </section>
 
     <section>
-      <h1 style="text-align: center;">Why Should I Buy a Perfume</h1>
+      <h1 style="text-align: center">Why Should I Buy a Perfume</h1>
 
       <div class="section-five-parent reveal">
-        <div class=" section-five">
-         
-
+        <div class="section-five">
           <div class="section-five-kid">
             <h3>01</h3>
-            <p>it makes you have great scent </p>
+            <p>it makes you have great scent</p>
             <p>black is nice</p>
           </div>
           <div class="section-five-kid">
             <h3>02</h3>
             <p>It boosts your confidence</p>
             <p>black is nice</p>
-
           </div>
           <div class="section-five-kid">
             <h3>03</h3>
             <p>makes you smell sweet</p>
             <p>black is nice</p>
-
           </div>
         </div>
         <div class="five-img">
-          <img src="/static/images/peffpic.png" alt="">
+          <img src="/static/images/peffpic.png" alt="" />
         </div>
       </div>
     </section>
-    {%endblock all%}
-{%block footer %}
+    {%endblock all%} {%block footer %}
     <footer class="reveal">
       <div class="footer-child">
         <h1>BEST.</h1>
-        <p>follow us on </p>
-
-
+        <p>follow us on</p>
       </div>
       <div class="footer-child">
         <h1>Products</h1>
         <p>Perfumes</p>
         <p>Perfume oil</p>
-        <p>Body Mist </p>
+        <p>Body Mist</p>
         <p>Cologne</p>
         <p>Scents</p>
       </div>
       <div class="footer-child">
         <h1>Contact us</h1>
         <p>Greenvile plaza. No 15 ,block 20, admirality way, Lekki phase 1</p>
-          <p> call us: 09039983493</p>
-          <p>email infobest@gmail.com</p>
-        
+        <p>call us: 09039983493</p>
+        <p>email infobest@gmail.com</p>
       </div>
       <div class="footer-child">
-        <p>join our exclusive community to enjoy latest updates on nice fragrance</p>
-        <input type="email" name="" id="" placeholder="Your Email" required> <br>
-        <button> Subscribe </button>
+        <p>
+          join our exclusive community to enjoy latest updates on nice fragrance
+        </p>
+        <input type="email" name="" id="" placeholder="Your Email" required />
+        <br />
+        <button>Subscribe</button>
         <p>&copy; <span id="year"></span> All Right Reserved</p>
       </div>
     </footer>

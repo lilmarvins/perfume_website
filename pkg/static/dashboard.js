@@ -67,3 +67,22 @@ document.querySelectorAll('.fourth-child').forEach((element, index) =>{
 
 
 document.getElementById('year').textContent= new Date().getFullYear();
+
+
+
+// Get elements
+const svg = document.getElementById("account");
+const modal = document.getElementById("accountmodal");
+
+
+// Toggle modal visibility on click
+svg.addEventListener("click", () => {
+ modal.classList.toggle('active')
+});
+
+window.addEventListener("click", (event) => {
+  if (!modal.contains(event.target) && event.target !== svg) {
+    modal.classList.remove('active')
+  }
+
+});

@@ -26,3 +26,8 @@ def store():
 @app.route('/cart/')
 def cart():
     return render_template("user/cart.html",title='cart')
+
+
+@app.route('/account/')
+def account():
+    return render_template("user/account.html",title='My Account')
