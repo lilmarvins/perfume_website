@@ -50,7 +50,6 @@ flex-wrap: wrap;
 
 .big-side-account{
     width: 70%;
-    border: 1px solid #111111;
     border-radius: 5px;
 }
 
@@ -82,3 +81,51 @@ flex-wrap: wrap;
         }
   
 }
+
+
+.big-side-account{
+    padding: 10px;
+}
+.big-side-account .account-parent{
+    border: 1px solid #111111;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.big-side-account .accinfo{
+    padding :15px 0;
+    margin-bottom: 13px;
+    border-bottom:  1px solid #111111;
+    display: flex;
+    justify-content: space-between;
+}
+
+.big-side-account .accinfo a{
+    color: white;
+    padding: 5px;
+    background-color: rgb(3, 56, 56);
+    font-size: small;
+}
+.account-parent{
+    padding: 10px;
+}
+
+.account-parent h4{
+    margin-bottom: 10px;
+}
+
+
+.account-parent p{
+   font-size: small;
+}
+
+.account-parent .editacc{
+    margin-top: 15px;
+ }
+ 
+.account-parent .editacc a{
+    color: white;
+    font-size: small;
+ }
+ .big-side-account a:hover{
+color:#ff9800;
+ }
