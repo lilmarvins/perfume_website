@@ -3,7 +3,7 @@ SECRET_KEY= 'i am a very random strin 923280'
 APP_NAME='flaskproject'
 DEBUG=True
 ENV='production'
-SQLALCHEMY_DATABASE_URI='mysql+mysqlconnector://root:@localhost/confdb'
+SQLALCHEMY_DATABASE_URI='mysql+mysqlconnector://root:@localhost/perfume_website'
 SQLALCHEMY_TRACK_MODIFICATIONS=True
 
 MAIL_SERVER="smtp.gmail.com"
