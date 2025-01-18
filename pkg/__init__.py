@@ -21,4 +21,4 @@ def create_app():
     return app
 
 app = create_app()
-from pkg import routes
+from pkg import routes,admin_routes
